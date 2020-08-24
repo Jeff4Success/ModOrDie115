@@ -1,5 +1,6 @@
 {
   "item.tutorial.ruby": "Ruby",
+  "item.tutorial.poison_apple": "Poison Apple",
   "item.tutorial.ruby_sword": "Ruby Sword",
   "item.tutorial.ruby_pickaxe": "Ruby PickAxe",
   "item.tutorial.ruby_boots": "Ruby Boots",
@@ -7,5 +8,6 @@
   "item.tutorial.ruby_leggings": "Ruby Leggings",
   "item.tutorial.ruby_chestplate": "Ruby Chestplate",
   "block.tutorial.ruby_block": "Ruby Block",
+  "block.tutorial.ruby_ore": "Ruby Ore",
   "itemGroup.tutorialTab": "Tutorial"
 }

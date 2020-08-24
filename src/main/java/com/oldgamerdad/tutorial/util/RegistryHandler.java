@@ -4,7 +4,9 @@ import com.oldgamerdad.tutorial.Tutorial;
 import com.oldgamerdad.tutorial.armor.ModArmorMaterial;
 import com.oldgamerdad.tutorial.blocks.BlockItemBase;
 import com.oldgamerdad.tutorial.blocks.RubyBlock;
+import com.oldgamerdad.tutorial.blocks.RubyOre;
 import com.oldgamerdad.tutorial.items.ItemBase;
+import com.oldgamerdad.tutorial.items.PoisonApple;
 import com.oldgamerdad.tutorial.tools.ModItemTier;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -19,8 +21,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class RegistryHandler {
 
-    public static final DeferredRegister<Item> ITEMS =  new DeferredRegister<>(ForgeRegistries.ITEMS, Tutorial.MOD_ID);
-    public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Tutorial.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS   =  DeferredRegister.create(ForgeRegistries.ITEMS, Tutorial.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Tutorial.MOD_ID);
 
     public static void init() {
 
@@ -31,6 +33,7 @@ public class RegistryHandler {
 
     // For Items Only
     public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", ItemBase::new);
+    public static final RegistryObject<PoisonApple> POISON_APPLE = ITEMS.register("poison_apple", PoisonApple::new);
 
     // For Tools Only
     public static final RegistryObject<SwordItem> RUBY_SWORD = ITEMS.register("ruby_sword", () ->
@@ -54,8 +57,10 @@ public class RegistryHandler {
 
     // For Blocks Only
     public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block", RubyBlock::new);
+    public static final RegistryObject<Block> RUBY_ORE = BLOCKS.register("ruby_ore", RubyOre::new);
 
     // For Block Items Only
     public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block", () -> new BlockItemBase(RUBY_BLOCK.get()));
+    public static final RegistryObject<Item> RUBY_ORE_ITEM = ITEMS.register("ruby_ore", () -> new BlockItemBase(RUBY_ORE.get()));
 
 }
